@@ -10,8 +10,9 @@ from src.body import Body
 
 body_estimation = Body('model/body_pose_model.pth')
 #hand_estimation = Hand('model/hand_pose_model.pth')
+test_images = ['Orissa_I55.png', 'Bhutan_I1.png', 'Bhutan_I31.png', 'Tamil Nadu Chola_I16.png', 'Tamil Nadu Chola_I16.png']
 
-test_image = 'images/demo.jpg'
+test_image = 'images/' + test_images[3]
 oriImg = cv2.imread(test_image)  # B,G,R order
 candidate, subset = body_estimation(oriImg)
 canvas = copy.deepcopy(oriImg)
