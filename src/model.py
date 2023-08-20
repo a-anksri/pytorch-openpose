@@ -139,7 +139,7 @@ class bodypose_model(nn.Module):
         out6_2 = self.model6_2(out6)
 
         return out6_1, out6_2
-
+'''
 class handpose_model(nn.Module):
     def __init__(self):
         super(handpose_model, self).__init__()
@@ -215,5 +215,5 @@ class handpose_model(nn.Module):
         concat_stage6 = torch.cat([out_stage5, out1_0], 1)
         out_stage6 = self.model6(concat_stage6)
         return out_stage6
-
+'''
 
